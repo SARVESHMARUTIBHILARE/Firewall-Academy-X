@@ -734,11 +734,11 @@ The main objectives of Firewall Academy X are:
 
 # 👨‍💻 Developer
 
-**Name:** Aayan
+**Name:** Bhilare Sarvesh
 
 ### 🔗 GitHub
 
-https://github.com/YOUR-USERNAME
+https://github.com/SARVESHMARUTIBHILARE
 
 ---
 
