@@ -180,9 +180,9 @@ The interactive learning section allows users to:
 - Track lesson progress
 - Continue unfinished courses
 
-Learning Process
+#Learning Process
 
-Select Course
+Select Course 
       ↓
 Start Lesson
       ↓
@@ -238,7 +238,7 @@ The QR code should open the certificate verification page.
 Verification Process
 The QR code should open the certificate verification page.
 
-Verification Process
+#Verification Process
 Course Completed
       ↓
 Certificate Generated
@@ -254,3 +254,93 @@ Certificate ID Submitted
 Certificate Checked
       ↓
 VERIFIED / INVALID
+
+# Verification Status
+
+| Status      | Meaning                         |
+| ----------- | ------------------------------- |
+| 🟢 VERIFIED | Certificate exists and is valid |
+| 🔴 INVALID  | Certificate ID is invalid       |
+| 🟡 PENDING  | Verification is pending         |
+
+#📄 Certificate PDF
+
+The certificate system supports a professional printable certificate containing:
+
+Firewall Academy X logo
+Student name
+Course name
+Certificate ID
+Completion date
+Course duration
+Authorized signature
+QR code
+Verification URL
+Verification status
+Security branding
+
+Users can download and print their certificates as PDF files.
+
+#🛠️ Technologies Used
+| Technology    | Purpose                        |
+| ------------- | ------------------------------ |
+| HTML5         | Website structure              |
+| CSS3          | Website styling                |
+| JavaScript    | Frontend functionality         |
+| Node.js       | Backend server                 |
+| Express.js    | REST API                       |
+| MongoDB       | Database                       |
+| QR Code       | Certificate verification       |
+| PDF Generator | Certificate generation         |
+| REST API      | Frontend/backend communication |
+| GitHub        | Version control                |
+| VS Code       | Development                    |
+
+#🏗️ System Architecture
+                  ┌─────────────────────┐
+                  │   Microsoft Edge    │
+                  │     Web Browser     │
+                  └──────────┬──────────┘
+                             │
+                             ▼
+                  ┌─────────────────────┐
+                  │    HTML / CSS / JS  │
+                  │     Frontend UI     │
+                  └──────────┬──────────┘
+                             │
+                             ▼
+                  ┌─────────────────────┐
+                  │      Node.js        │
+                  │    Express Server   │
+                  └──────────┬──────────┘
+                             │
+                  ┌──────────┴──────────┐
+                  ▼                     ▼
+          ┌─────────────────┐   ┌─────────────────┐
+          │     MongoDB     │   │    AI Coach     │
+          │    Database     │   │   AI Service    │
+          └─────────────────┘   └─────────────────┘
+
+#🗄️ Database
+
+The application can use MongoDB for persistent application data.
+
+#Main Collections
+users
+courses
+lessons
+enrollments
+progress
+quizResults
+certificates
+notifications
+
+#Example Certificate Document
+{
+  "certificateId": "FAX-2026-8F3K92",
+  "studentName": "Aayan",
+  "course": "Firewall Fundamentals",
+  "completionDate": "2026-10-04",
+  "status": "VERIFIED",
+  "issuer": "Firewall Academy X"
+}
