@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Firewall Academy X</title>
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+  <header>
+    <div class="logo">🛡️ <b>Firewall</b>
+      <span>Academy X</span>
+    </div>
+    <nav>
+<button data-page="dashboard">Dashboard</button>
+<button data-page="profileDetails">My Profile</button>
+<button data-page="guide">Academy Guide</button>
+<button data-page="courses">Courses</button>
+<button data-page="paths">Learning Paths</button>
+<button data-page="resources">Resources</button>
+<button data-page="lab">Cyber Lab</button>
+<button data-page="builder">Firewall Builder</button>
+<button data-page="deviceFirewall">Device Firewalls</button>
+<button data-page="badges">Badges</button>
+<button data-page="certificates">Certificates</button>
+<button data-page="ai">AI Coach</button>
+<button data-page="admin">Admin Users</button>
+<button data-page="login" id="loginNav">🔐 Login</button>
+</nav>
+</header>
+<main>
+<section id="dashboard" class="page active">
+  <div class="hero"><div>
+    <small>INTERACTIVE CYBERSECURITY ACADEMY</small>
+    <h1>Learn.<br>
+      <em>Build. Defend.</em></h1>
+      <p>Master firewall concepts with structured courses, learning paths, hands-on labs, policy coding, XP, badges, certificates and an offline AI-style coach.</p>
+      <button class="primary" data-page="courses">Start Learning →</button>
+       <button class="secondary" data-page="builder">Build a Firewall</button>
+      </div>
+      <div class="orb">🛡️<div class="pulse">
+      </div>
+    </div>
+  </div>
+<div class="profile">
+  <div><b id="userName">Learner</b>
+    <button class="profileEdit" onclick="openProfile()">✏️ Edit profile</button>
+    <button class="profileEdit" onclick="show('profileDetails')">👤 Detailed view</button>
+    <p id="userEmail">Create your profile to sync progress.</p>
+    <div class="levelbar">
+      <span id="levelText">Level 1 • 0 XP</span>
+      <div>
+        <i id="levelFill"></i>
+      </div>
+    </div></div>
+    <div class="stats">
+      <span>⭐ <b id="xp">0</b> XP</span>
+      <span>🏆 <b id="badgeCount">0</b> Badges</span>
+      <span>📜 <b id="certCount">0</b> Certificates</span>
+      <span>🔥 <b id="streak">0</b> Day Streak</span></div></div>
+<div class="grid three">
+  <div class="card">
+    <span class="icon">🎓</span>
+    <h3>Skill-based courses</h3>
+    <p>Networking, stateful inspection, NAT, WAF, cloud security, hardening, logging and SOC workflows.</p>
+  </div><div class="card">
+    <span class="icon">⚙️</span>
+    <h3>Code your policy</h3>
+    <p>Turn a normalized rule set into educational Linux, Windows, Python or ACL-style output.</p>
+  </div><div class="card">
+    <span class="icon">🤖</span>
+    <h3>AI Coach</h3><p>Ask questions, review rules, get study hints and receive next-step recommendations without an API key.</p>
+  </div>
+</div>
+<div class="sectionhead"><div>
+  <small>LEARNING PULSE</small>
+  <h2>Your Security Journey</h2>
+</div>
+<button class="secondary" onclick="show('resources')">Explore official resources</button>
+</div><div id="dashboardCards" class="grid"></div>
+</section>
+
+<section id="profileDetails" class="page">
+  <div class="profileDetailHero"><div>
+    <small>YOUR SECURITY IDENTITY</small>
+    <h2>👤 My Learning Profile</h2>
+    <p class="muted lead">A detailed view of your learner account, progress, achievements, saved systems and recent academy activity.</p>
+  </div>
+  <div class="identityOrb">🛡️</div>
+</div>
+<div id="profileDetailGrid" class="grid three"></div>
+<div class="sectionhead"><div>
+  <small>ACTIVITY TIMELINE</small>
+  <h2>Recent learning activity</h2>
+</div>
+<button class="secondary" onclick="openProfile()">✏️ Edit Profile</button>
+</div>
+<div id="activityTimeline" class="timeline card"></div>
+<div class="sectionhead"><div>
+  <small>DAILY MISSION</small>
+  <h2>🎯 Today's Security Challenge</h2>
+</div>
+<button class="primary" onclick="startDailyMission()">Start Mission</button>
+</div>
+<div id="dailyMission" class="card missionCard"></div>
+<div class="sectionhead"><div>
+  <small>ACCOUNT DETAILS</small>
+  <h2>Stored learner information</h2>
+</div>
+</div>
+<div id="accountDetails" class="card accountDetails"></div>
+</section>
+
+<section id="guide" class="page"><div class="guideHero">
+  <div>
+    <small>WELCOME TO YOUR LEARNING CENTER</small>
+    <h2>🎓 Academy Guide</h2>
+    <p class="muted lead">One page that explains what every part of Firewall Academy X does, what users should learn, how to complete the labs, how points and certificates work, and where to continue learning on Google, YouTube, Instagram and Facebook.</p>
+    <div class="guideActions">
+      <button class="primary" onclick="show('courses')">Explore All Courses →</button>
+      <button class="secondary" onclick="show('lab')">Start a Lab 🧪</button>
+      <button class="secondary" onclick="show('builder')">Build a Firewall 🛡️</button>
+    </div></div>
+    <div class="guideOrb">🧠<span>LEARN<br>BUILD<br>DEFEND</span>
+    </div></div>
+<div class="guideSteps">
+  <div class="guideStep">
+    <b>01</b>
+    <h3>Learn</h3>
+    <p>Open a course, read the lesson goals and use the external learning buttons for deeper study.</p>
+  </div>
+  <div class="guideStep">
+    <b>02</b>
+    <h3>Practice</h3>
+    <p>Use Cyber Lab challenges to test ports, rule order, least privilege and OWASP concepts.</p>
+  </div>
+  <div class="guideStep">
+    <b>03</b><h3>Build</h3>
+    <p>Create your own educational firewall policy, analyze it and generate code examples.</p>
+  </div>
+  <div class="guideStep">
+    <b>04</b>
+    <h3>Prove</h3>
+    <p>Earn XP, badges and interactive certificates as you complete your learning journey.</p>
+  </div>
+</div>
+<div class="sectionhead">
+  <div><small>COURSE MAP</small>
+    <h2>What is inside each course?</h2>
+  </div><span class="tag">8 COURSES • 8 CERTIFICATES</span>
+</div>
+<div id="guideCourses" class="grid guideCourses">
+</div>
+<div class="sectionhead">
+  <div>
+    <small>LAB GUIDANCE</small>
+    <h2>How users should use the Cyber Lab</h2>
+  </div>
+  <button class="secondary" onclick="show('lab')">Open Cyber Lab →</button>
+</div>
+<div class="grid guideLabGrid">
+  <article class="card guideFeature">
+    <div class="featureIcon">🔎</div>
+    <h3>Port Detective</h3>
+    <p>Learn common services such as SSH, HTTPS and RDP. Decide which services should be exposed and which should be restricted.</p>
+    <ol>
+      <li>Read the service and port.</li>
+      <li>Choose the best answer.</li>
+      <li>Review the explanation and earn XP.</li>
+    </ol>
+  </article>
+  <article class="card guideFeature">
+    <div class="featureIcon">📐</div>
+    <h3>Rule Order Challenge</h3>
+    <p>Understand why specific security decisions may need to take priority over broad rules depending on the firewall's evaluation model.</p>
+    <ol>
+      <li>Identify the broad rule.</li>
+      <li>Find the narrow security decision.</li>
+      <li>Think about evaluation order.</li>
+    </ol>
+  </article>
+  <article class="card guideFeature">
+    <div class="featureIcon">🔐</div>
+    <h3>Least Privilege</h3>
+    <p>Practice replacing broad policies with specific source, protocol and service combinations.</p>
+    <ol>
+      <li>Start with a broad example.</li>
+      <li>Specify source and destination.</li>
+      <li>Limit the protocol and port.</li>
+    </ol>
+  </article>
+  <article class="card guideFeature">
+    <div class="featureIcon">🧭</div>
+    <h3>OWASP Mapping</h3>
+    <p>Connect firewall and web-security thinking with the current OWASP Top 10:2025 awareness categories.</p>
+    <ol>
+      <li>Read the scenario.</li>
+      <li>Select the matching category.</li>
+      <li>Open the official OWASP resource for deeper study.</li>
+    </ol>
+  </article>
+</div>
+<div class="sectionhead"><div>
+  <small>REWARDS</small>
+  <h2>How points, badges & certificates work</h2>
+</div>
+</div>
+<div class="grid guideRewardGrid">
+  <article class="card rewardCard">
+    <span>⭐</span>
+    <h3>XP & Points</h3>
+    <p>XP measures progression toward levels. Points represent total learning activity across courses, labs, policy analysis and builder tasks.</p>
+    <b>Tip:</b> Complete different activity types rather than repeating the same action.
+  </article>
+    <article class="card rewardCard">
+      <span>🏆</span>
+      <h3>Badges</h3>
+      <p>Badges recognize milestones such as reaching XP thresholds, completing practical labs, saving firewall systems and generating code.</p>
+      <b>Tip:</b> Open the Badges page to see earned and locked achievements.
+    </article>
+    <article class="card rewardCard">
+      <span>📜</span>
+      <h3>Certificates</h3>
+      <p>Completing a course creates a course-specific certificate with learner name, certificate ID, issue date and XP information.</p>
+      <b>Tip:</b> Use View Certificate, Verify, Share or Print / Save PDF.
+    </article>
+  </div>
+<div class="sectionhead">
+  <div>
+    <small>FIREWALL BUILDER</small>
+    <h2>How to create your own firewall system</h2>
+  </div>
+  <button class="primary" onclick="show('builder')">Open Builder →</button>
+</div>
+<div class="builderGuide card">
+  <div class="builderGuideStep">
+    <span>1</span>
+    <div>
+      <h3>Name your system</h3>
+      <p>Give the firewall design a meaningful name and choose the target style such as Linux, Windows, Cisco-style ACL or Cloud Security Group.</p>
+    </div>
+  </div>
+  <div class="builderGuideStep">
+    <span>2</span>
+    <div>
+      <h3>Add rules</h3>
+      <p>Use the quick templates or write your own educational policy. Prefer specific sources, protocols, ports and destinations.</p>
+    </div></div>
+    <div class="builderGuideStep">
+      <span>3</span>
+      <div>
+        <h3>Analyze the policy</h3>
+        <p>Run the analyzer to identify broad rules, missing defaults and other learning opportunities.</p>
+      </div></div>
+      <div class="builderGuideStep">
+        <span>4</span>
+        <div>
+          <h3>Generate code & save</h3>
+          <p>Generate an educational code example, review it carefully and save the system to your learner profile.</p>
+        </div>
+      </div>
+    </div>
+<div class="sectionhead">
+  <div>
+    <small>AI LEARNING ASSISTANT</small>
+    <h2>What the AI Coach can help with</h2>
+  </div>
+  <button class="secondary" onclick="show('ai')">Ask AI Coach →</button>
+</div>
+<div class="aiGuide card">
+  <div class="aiGuidePulse">🤖</div>
+<div>
+  <h3>Personal study guidance</h3>
+  <p class="muted">Ask for simple explanations, rule reviews, study plans, WAF concepts, OWASP mappings, port explanations, least-privilege guidance or help understanding a lab.</p>
+  <div class="aiPromptChips">
+    <button onclick="show('ai');askAI('Explain firewall fundamentals for a beginner')">Beginner explanation</button>
+    <button onclick="show('ai');askAI('Give me a 7 day firewall study plan')">7-day plan</button>
+    <button onclick="show('ai');askAI('Review this policy: ALLOW ANY ANY')">Review a policy</button>
+  </div></div>
+</div>
+<div class="sectionhead">
+  <div>
+  <small>EXTERNAL LEARNING HUB</small>
+  <h2>Learn with Google, YouTube, Instagram & Facebook</h2>
+</div>
+</div>
+<div class="socialLearning card">
+  <p class="muted">Firewall Academy X keeps external content as links. Google helps users discover documentation, YouTube provides video tutorials, Instagram can be used for short-form security content, and Facebook can be used for community discussions. Always verify technical advice against authoritative documentation.</p>
+  <div class="socialGrid large">
+    <a class="socialBtn google" href="https://www.google.com/search?q=firewall+cybersecurity+tutorial" target="_blank" rel="noopener">🔎 <b>Google</b>
+      <small>Search firewall tutorials</small>
+    </a>
+    <a class="socialBtn youtube" href="https://www.youtube.com/results?search_query=firewall+cybersecurity+tutorial" target="_blank" rel="noopener">▶ <b>YouTube</b>
+      <small>Watch firewall tutorials</small>
+    </a>
+    <a class="socialBtn instagram" href="https://www.instagram.com/explore/search/keyword/?q=cybersecurity" target="_blank" rel="noopener">◎ <b>Instagram</b>
+      <small>Explore security content</small>
+    </a>
+    <a class="socialBtn facebook" href="https://www.facebook.com/search/top?q=cybersecurity" target="_blank" rel="noopener">f <b>Facebook</b>
+      <small>Explore security communities</small>
+    </a>
+  </div>
+</div>
+<div class="guideNote card">
+  <b>📌 Important:</b> The Academy is an educational simulator. Generated firewall configurations are examples for learning and do not automatically change the operating-system firewall.
+   For web security, the guide points learners to OWASP Top 10:2025, which OWASP describes as an awareness starting point rather than a complete security standard. 
+  <a href="https://top10.owasp.org/2025/en/" target="_blank" rel="noopener">Open OWASP Top 10:2025 ↗</a>
+</div>
+</section>
+
+<section id="courses" class="page">
+  <small>COURSE LIBRARY • 50 ONE-HOUR COURSES</small>
+  <h2>Courses & Lessons</h2>
+  <p class="muted">Every course includes a full syllabus, learning outcomes, skills, XP, practical focus and a printable certificate. Complete each course once to unlock its reward.</p>
+  <div class="filters">
+    <button class="chip active" onclick="filterCourses('All',this)">All</button>
+    <button class="chip" onclick="filterCourses('Beginner',this)">Beginner</button>
+    <button class="chip" onclick="filterCourses('Intermediate',this)">Intermediate</button>
+    <button class="chip" onclick="filterCourses('Advanced',this)">Advanced</button>
+    <button class="chip" onclick="filterCourses('Career',this)">Career</button>
+  </div>
+  <div id="coursesGrid" class="grid">
+    <div class="card course">
+    <span class="tag">BEGINNER • 150 XP</span>
+    <h3>🛡️ Firewall Fundamentals</h3>
+    <p class="muted">Networking, ports, protocols, filtering and default policies.</p>
+    <p>📚 8 lessons • 📜 Certificate</p>
+    <button class="secondary" data-page="courses">Open Course Library</button>
+  </div>
+  <div class="card course">
+    <span class="tag">INTERMEDIATE • 275 XP</span>
+    <h3>🌐 Web Application Firewall</h3>
+    <p class="muted">HTTP security, WAF rules, custom rules and rate limiting.</p>
+    <p>📚 8 lessons • 📜 Certificate</p>
+    <button class="secondary" data-page="courses">Explore WAF Course</button>
+  </div><div class="card course">
+    <span class="tag">CAREER • 500 XP</span>
+    <h3>🏗️ Firewall Architect Capstone</h3>
+    <p class="muted">Design, document and test an enterprise firewall architecture.</p>
+    <p>📚 8 lessons • 📜 Certificate</p>
+    <button class="secondary" data-page="courses">Explore Capstone</button>
+  </div>
+</div>
+</section>
+<section id="paths" class="page">
+  <small>ROADMAPS</small>
+  <h2>Learning Paths</h2>
+  <div id="pathsGrid" class="roadmap">
+    <div class="path card">
+      <span class="pathnum">01</span>
+      <div>
+        <b>🟢 Firewall Foundations</b>
+        <p>Networking → ports → filtering → first policy.</p>
+        <span class="tag">Beginner • 250 XP • 4 modules</span>
+      </div></div>
+      <div class="path card">
+        <span class="pathnum">02</span>
+        <div>
+          <b>🟣 Web & WAF Defender</b>
+          <p>HTTP → WAF → custom rules → rate limiting.</p>
+          <span class="tag">Intermediate • 500 XP • 5 modules</span>
+        </div></div>
+        <div class="path card">
+          <span class="pathnum">03</span>
+          <div><b>🟠 Firewall Architect Capstone</b>
+            <p>Enterprise zones → policy model → logging → testing.</p>
+            <span class="tag">Career • 1000 XP • 8 modules</span>
+          </div>
+        </div>
+      </div>
+      </section>
+
+<section id="resources" class="page">
+  <small>CURATED KNOWLEDGE + SOCIAL LEARNING</small>
+  <h2>Official Security Resources</h2>
+  <p class="muted">Official references for OWASP, WAF, cloud security and secure web development. Each card is loaded with a local fallback so the content remains visible even if the API is temporarily unavailable.</p>
+  <div id="resourcesGrid" class="grid">
+    <div class="card resource">
+      <div class="resourceIcon">🔴</div>
+      <span class="tag">OWASP</span>
+      <h3>OWASP Top 10: 2025</h3>
+      <p class="muted">Current awareness resource for major web application security risks.</p>
+      <a class="resourceLink" href="https://top10.owasp.org/2025/" target="_blank" rel="noopener">Open official resource ↗</a>
+    </div><div class="card resource">
+      <div class="resourceIcon">🟠</div>
+      <span class="tag">Cloudflare</span>
+      <h3>Cloudflare WAF Learning Path</h3>
+      <p class="muted">Official learning material for WAF and application security.</p>
+      <a class="resourceLink" href="https://developers.cloudflare.com/learning-paths/application-security/firewall/" target="_blank" rel="noopener">Open official resource ↗</a>
+    </div>
+    <div class="card resource">
+      <div class="resourceIcon">🔵</div>
+      <span class="tag">MDN</span><h3>MDN Website Security</h3>
+      <p class="muted">Practical guidance for secure web development and server-side security.</p>
+      <a class="resourceLink" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security" target="_blank" rel="noopener">Open official resource ↗</a>
+    </div>
+  </div>
+  <div class="socialHub card">
+    <div>
+    <span class="tag">4-WAY LEARNING HUB</span>
+    <h3>Learn, watch, search & follow</h3>
+    <p class="muted">Use Google for topic discovery, YouTube for tutorials, Instagram for short-form security content, and Facebook for community discussions. The app opens the platforms without copying their content.</p>
+  </div>
+  <div class="socialGrid">
+    <a class="socialBtn google" href="https://www.google.com/search?q=firewall+cybersecurity" target="_blank" rel="noopener">🔎 Google Search</a>
+    <a class="socialBtn youtube" href="https://www.youtube.com/results?search_query=firewall+cybersecurity" target="_blank" rel="noopener">▶ YouTube Videos</a>
+    <a class="socialBtn instagram" href="https://www.instagram.com/explore/search/keyword/?q=cybersecurity" target="_blank" rel="noopener">◎ Instagram</a>
+    <a class="socialBtn facebook" href="https://www.facebook.com/search/top?q=cybersecurity" target="_blank" rel="noopener">f Facebook</a>
+  </div></div>
+</section>
+
+<section id="lab" class="page">
+  <small>HANDS-ON PRACTICE</small>
+  <h2>Cyber Lab</h2>
+  <p class="muted lead">Interactive challenges now validate your choice, explain the answer, and award XP only once per browser profile.</p>
+  <div class="labgrid">
+    <div class="card lab">
+      <span class="tag">LAB 01 • 15 XP</span>
+      <h3>Port Detective</h3>
+      <p>Which port is commonly used for HTTPS on a public web server?</p>
+      <select id="portQ">
+        <option value="" selected>Choose a port...</option>
+        <option value="22">22 — SSH</option>
+        <option value="443">443 — HTTPS</option>
+        <option value="3389">3389 — RDP</option>
+      </select>
+      <button class="primary" onclick="checkPort()">Submit Lab</button>
+      <div id="portResult"></div>
+    </div>
+<div class="card lab">
+  <span class="tag">LAB 02 • 15 XP</span>
+  <h3>Rule Order Challenge</h3>
+  <p>Which should generally be evaluated first when a narrow security block must beat a broad allow?</p>
+  <select id="orderQ">
+    <option value="">Choose...</option>
+    <option value="allow">Broad ALLOW</option>
+    <option value="block">Specific BLOCK</option>
+  </select>
+  <button class="primary" onclick="checkOrder()">Submit Lab</button>
+  <div id="orderResult"></div>
+</div>
+<div class="card lab">
+  <span class="tag">LAB 03 • 20 XP</span>
+  <h3>Least Privilege</h3><p>Rewrite a broad policy into a narrower educational rule.</p>
+  <textarea id="leastInput" placeholder="Example: ALLOW TCP 443 FROM 10.0.0.0/24">
+  </textarea>
+  <button class="primary" onclick="checkLeast()">Review Policy</button>
+  <div id="leastResult"></div></div>
+<div class="card lab">
+  <span class="tag">LAB 04 • 25 XP</span>
+  <h3>OWASP Mapping</h3>
+  <p>Which 2025 OWASP category most directly describes unsafe configuration choices?</p>
+  <select id="owaspQ">
+    <option value="">Choose...</option>
+    <option>Security Misconfiguration</option>
+    <option>Injection</option>
+    <option>Cryptographic Failures</option>
+  </select>
+  <button class="primary" onclick="checkOwasp()">Submit Lab</button>
+  <div id="owaspResult"></div>
+</div></div>
+</section>
+
+<section id="deviceFirewall" class="page">
+  <small>BROWSER ENVIRONMENT CHECK</small>
+  <h2>🖥️ This browser & computer</h2>
+  <p class="muted lead">Live Server/browser mode cannot directly query or change your operating-system firewall.
+     This page performs safe browser-side checks and gives you the correct platform commands for a real firewall inspection. It does not require a local Node.js server.</p>
+  <div class="grid three">
+    <article class="card osCard">
+      <span class="bigIcon">🌐</span>
+      <h3>Browser</h3>
+      <p>Checks whether the browser is online, whether this page is using a secure context, and whether browser storage is available.</p>
+      <code>navigator.onLine</code><br>
+      <code>window.isSecureContext</code>
+    </article>
+    <article class="card osCard">
+      <span class="bigIcon">🪟</span>
+      <h3>Windows</h3>
+      <p>For the actual Windows Defender Firewall status, run the following in PowerShell on your computer.</p>
+      <code>Get-NetFirewallProfile</code>
+      <p><small>Windows Security → Firewall & network protection is also available.</small></p>
+      </article>
+      <article class="card osCard">
+        <span class="bigIcon">🐧</span>
+        <h3>Linux / macOS</h3>
+        <p>Use the platform's supported local firewall command. A browser page cannot execute these commands directly.</p>
+        <code>Linux: ufw status</code>
+        <br><code>Linux: firewall-cmd --state</code>
+        <br><code>macOS: socketfilterfw --getglobalstate</code>
+      </article>
+    </div>
+    <div class="sectionhead">
+        <div><small>LOCAL MACHINE CHECK</small>
+          <h2 id="deviceFirewallTitle">Browser environment ready</h2>
+        </div>
+        <button class="primary" onclick="loadDeviceFirewall()">↻ Refresh Status</button>
+      </div>
+      <div id="deviceFirewallStatus" class="card deviceStatus">
+        <div class="spinner">Browser environment ready</div>
+      </div>
+        <div class="card safetyNote">
+          <h3>🛡️ Browser-safe firewall check</h3>
+          <p>Your browser intentionally blocks websites from reading OS firewall configuration directly. 
+            This is a browser security restriction, not a website error. 
+            The check below therefore reports browser/network capabilities instead of falsely claiming that a firewall was detected.</p>
+            <div class="codeGrid"><div>
+              <b>Windows PowerShell</b>
+              <pre>Get-NetFirewallProfile</pre>
+            </div>
+            <div>
+              <b>Linux</b>
+              <pre>sudo firewall-cmd --list-allufw statusnft list ruleset</pre>
+            </div>
+            <div>
+              <b>macOS</b>
+              <pre>socketfilterfw --getglobalstate</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+<section id="builder" class="page">
+  <small>POLICY ENGINEERING STUDIO</small>
+  <h2>Build Your Own Firewall System</h2>
+  <p class="muted">Create, validate, test, generate and save a normalized firewall policy. 
+    The builder never executes generated commands on your computer.</p>
+    <div class="buildergrid">
+      <div class="form">
+      <div class="row">
+      <input id="fwName" placeholder="Firewall system name">
+      <select id="platform">
+        <option>Linux / iptables</option>
+        <option>Linux / nftables</option>
+        <option>Linux / firewalld</option>
+        <option>Windows Firewall</option>
+        <option>macOS / Application Firewall</option>
+        <option>macOS / Packet Filter (pf)</option>
+        <option>Cisco-style ACL</option>
+        <option>Cloud Security Group</option>
+        <option>Generic Firewall Policy</option>
+      </select>
+    </div>
+    <select id="language">
+      <option>Text Policy</option>
+      <option>Shell</option>
+      <option>PowerShell</option>
+      <option>Python</option>
+      <option>ACL</option></select>
+<div class="builderToolbar">
+  <button class="secondary" id="newPolicy">＋ New Policy</button>
+  <button class="secondary" id="demoPolicy">🧪 Load Test Policy</button>
+  <button class="secondary" id="exportPolicy">⇩ Export JSON</button>
+  <button class="secondary" id="importPolicy">⇧ Import JSON</button>
+  <input id="importPolicyFile" type="file" accept="application/json,.json" hidden>
+</div>
+<div class="ruleEditor">
+  <div class="ruleEditorTitle">
+  <div>
+    <span class="tag">RULE EDITOR</span>
+    <h3 id="ruleEditorHeading">Add firewall rule</h3>
+  </div>
+  <span id="ruleEditMode" class="muted">New rule</span>
+</div>
+<div class="ruleFormGrid">
+  <label>Action
+    <select id="ruleAction">
+      <option>ALLOW</option>
+      <option>DENY</option>
+    </select>
+  </label>
+  <label>Direction<select id="ruleDirection">
+    <option>INBOUND</option>
+    <option>OUTBOUND</option>
+  </select>
+</label>
+  <label>Protocol<select id="ruleProtocol">
+    <option>TCP</option>
+    <option>UDP</option>
+    <option>ICMP</option>
+    <option>ANY</option>
+  </select>
+</label>
+  <label>Source<input id="ruleSource" value="ANY" placeholder="IP / CIDR / ANY">
+  </label>
+  <label>Destination<input id="ruleDestination" value="ANY" placeholder="IP / CIDR / ANY">
+  </label>
+  <label>Source Port<input id="ruleSourcePort" value="ANY" placeholder="ANY / 22 / 1000-2000">
+  </label>
+  <label>Destination Port<input id="ruleDestinationPort" value="ANY" placeholder="ANY / 443 / 8000-8080">
+  </label>
+  <label>Name<input id="ruleName" placeholder="Optional rule name">
+  </label>
+</div>
+<div class="ruleEditorActions">
+  <label class="toggleLabel">
+    <input id="ruleEnabled" type="checkbox" checked> Enabled</label>
+    <label class="toggleLabel">
+      <input id="ruleLogging" type="checkbox"> Logging</label>
+      <button class="primary" id="addRule">＋ Add Rule</button>
+      <button class="secondary" id="cancelEdit" hidden>Cancel Edit</button>
+    </div>
+  </div>
+<div class="quick">
+  <span class="muted quickLabel">Quick add:</span>
+  <button onclick="quickRule('ALLOW','INBOUND','TCP','10.0.0.0/24','ANY','ANY','443')">+ HTTPS allow</button>
+  <button onclick="quickRule('DENY','INBOUND','TCP','ANY','ANY','ANY','23')">+ Block Telnet</button>
+  <button onclick="quickRule('DENY','INBOUND','TCP','ANY','ANY','ANY','3389')">+ Block RDP</button>
+  <button onclick="quickRule('ALLOW','INBOUND','TCP','10.0.0.10/32','ANY','ANY','22')">+ Admin SSH</button>
+</div>
+<div class="ruleListHeader">
+  <h3>Policy Rules</h3>
+  <span id="ruleListMeta" class="muted">0 rules</span>
+</div>
+<div id="ruleList" class="ruleList"></div>
+<textarea id="fwCode"># Educational firewall policy
+ALLOW TCP 443 FROM 10.0.0.0/24
+DENY TCP 23 ANY
+DENY TCP 3389 FROM 0.0.0.0/0</textarea>
+<div class="builderStats" id="builderStats">
+  <div class="builderStat">
+    <b>0</b>
+    <span>RULES</span>
+  </div>
+  <div class="builderStat">
+    <b>0</b>
+    <span>DUPLICATES REMOVED</span>
+  </div><div class="builderStat">
+    <b class="good">Ready</b>
+    <span>POLICY STATUS</span>
+  </div>
+</div>
+<div class="builderActions">
+  <button class="primary" id="analyze">🔍 Analyze Policy</button>
+  <button class="secondary" id="generate">⚙️ Generate Code</button>
+  <button class="secondary" id="copyGenerated">📋 Copy Code</button>
+  <button class="secondary" id="downloadGenerated">⇩ Download Code</button>
+  <button class="secondary" id="saveFw">💾 Save System</button
+    div>
+  <div id="analysis" class="result"></div>
+  <div class="generatedHeader">
+    <h3>Generated Output</h3>
+    <span id="generatedMeta" class="muted">No code generated yet</span>
+  </div>
+  <pre id="generated" class="codeout"></pre>
+</div>
+  <div class="card">
+    <h3>🧠 Policy checklist</h3>
+    <ul class="checklist">
+      <li>Define a deliberate default policy.</li>
+      <li>Use least privilege.</li>
+      <li>Restrict administration ports.</li>
+      <li>Document rule purpose.</li>
+      <li>Log important decisions.</li>
+      <li>Review rule order.</li>
+      <li>Test in a safe environment.</li>
+    </ul>
+    <div class="scorebox">
+      <b id="policyScore">—</b>
+      <span>Security readiness</span>
+    </div>
+    <div class="builderHelp">
+      <b>💡 Builder workflow</b>
+      <p>1. Add or import rules → 2. Analyze → 3. Review warnings → 4. Generate platform code → 5. Save the normalized policy.</p>
+      <p class="muted">Generated code is for review/export. It is not executed automatically.</p>
+    </div>
+  </div>
+</div>
+<h3>Saved Firewall Systems</h3>
+<div id="firewalls"></div>
+</section>
+<section id="admin" class="page">
+  <div class="profileDetailHero">
+    <div>
+      <small>LOCAL ACADEMY ADMINISTRATION</small>
+      <h2>🧑‍💻 Learner Directory & Analytics</h2>
+      <p class="muted lead">View detailed learner records and academy activity for this local installation.
+         Admin access is protected by a local key.</p>
+        </div>
+        <div class="identityOrb">📊</div>
+      </div>
+      <div class="adminKeyRow card">
+        <input id="adminKey" type="password" placeholder="Enter admin password">
+        <button class="primary" onclick="loadAdmin()">🔓 Load Users</button>
+        <span id="adminStatus" class="muted"></span>
+      </div>
+        <div class="card adminPasswordCard"><div>
+          <span class="tag">ADMIN SECURITY</span>
+          <h3>🔐 Set / Change Admin Password</h3>
+          <p class="muted">Create your own administrator password for this browser-only installation.
+             Your password is stored as a SHA-256 hash in this browser.</p>
+            </div>
+            <form id="adminPasswordForm" class="adminPasswordForm" onsubmit="changeAdminPassword(event)">
+              <label>Current password<div class="passwordField">
+                <input id="adminCurrentPassword" type="password" minlength="6" autocomplete="current-password" required placeholder="Current admin password">
+                <button type="button" onclick="togglePassword('adminCurrentPassword',this)">Show</button>
+              </div>
+            </label>
+            <label>New password<div class="passwordField">
+              <input id="adminNewPassword" type="password" minlength="8" autocomplete="new-password" required placeholder="At least 8 characters">
+              <button type="button" onclick="togglePassword('adminNewPassword',this)">Show</button>
+            </div>
+            </label>
+            <label>Confirm new password<div class="passwordField">
+              <input id="adminConfirmPassword" type="password" minlength="8" autocomplete="new-password" required placeholder="Repeat new password">
+              <button type="button" onclick="togglePassword('adminConfirmPassword',this)">Show</button>
+            </div>
+          </label>
+            <button class="secondary" type="submit">🔑 Update Admin Password</button>
+            <span id="adminPasswordStatus" class="authStatus" aria-live="polite"></span>
+          </form>
+          </div>
+          <div id="adminStats" class="grid three"></div><div id="adminUsers" class="adminUsers">
+          </div>
+        </section>
+
+<section id="badges" class="page">
+  <small>GAMIFICATION</small>
+  <h2>Badges & Points</h2>
+  <p class="muted">XP comes from learning, labs, policy analysis and building.
+     Points track your total activity separately from certificates.</p>
+     <div id="badgesBox" class="grid"></div>
+    </section>
+<section id="certificates" class="page">
+  <small>PROOF OF LEARNING</small>
+  <h2>Interactive Certificates</h2>
+  <p class="muted">Each completed course gets its own certificate with a unique ID, issue date, learner name, verification view and print-ready design.</p>
+  <div id="certBox" class="grid">
+  </div>
+</section>
+<section id="ai" class="page">
+  <small>SMART LEARNING ASSISTANT</small>
+  <h2>🤖 Firewall AI Coach</h2>
+  <p class="muted aiCompactIntro">Gemini-powered security guidance with a clearly labeled local coach when Gemini is unavailable.</p>
+  <div class="aiwrap">
+<div class="coachbar">
+  <div class="coachIdentity">
+    <button type="button" class="secondary aiKeyButton" onclick="setBrowserGeminiKey()" title="Optional browser-only Gemini key">🔑 Gemini Key</button>
+    <span class="aiLogo" aria-hidden="true">
+      <svg viewBox="0 0 64 64" role="img">
+        <path d="M32 4 55 13v17c0 14-9 24-23 30C18 54 9 44 9 30V13L32 4Z" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="m24 34 5 5 11-14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="45" cy="13" r="5" fill="currentColor"/><path d="M45 5v16M37 13h16" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </span>
+    <span>
+      <b>Firewall AI Coach</b>
+      <small id="aiProviderStatus">Checking AI connection…</small>
+    </span>
+  </div>
+  <span class="coachStatus">
+    <i></i>
+    <span id="aiStatusText">Local Firewall Coach</span></span>
+</div>
+<div id="chat" class="chat" aria-live="polite">
+  <div class="chatMessage bot">
+    <span class="msgAvatar">✦</span>
+    <div class="messageBody">
+      <b>Firewall AI Coach</b>
+      <div class="aiMarkdown">
+        <p>👋 Hi! Ask me about firewall types, ports, stateful inspection, NAT, WAF, OWASP, rule order, logging, or paste a policy for a review.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="aiTyping" class="aiTyping hidden">
+  <span>
+  </span>
+  <span></span>
+  <span></span><em>Firewall AI Coach is thinking...</em>
+</div>
+<div class="suggestions"><button onclick="askAI('Explain stateful firewall in simple words')">Stateful firewall</button>
+  <button onclick="askAI('How should I design firewall rules?')">Rule design</button>
+  <button onclick="askAI('Explain OWASP Top 10')">OWASP</button>
+  <button onclick="askAI('Review this rule: ALLOW ANY ANY')">Review a rule</button>
+  <button onclick="askAI('Give me a learning plan for firewall security')">My study plan</button>
+</div>
+<div class="ask">
+  <input id="aiInput" autocomplete="off" placeholder="Ask Firewall AI Coach anything..." aria-label="Ask Firewall AI Coach">
+  <button class="primary" id="aiSendBtn" onclick="sendAI()">Send <span>➤</span>
+  </button>
+</div>
+</div>
+</section>
+</main>
+<section id="login" class="page">
+<div class="loginShell loginShellPro">
+  <div class="loginHero">
+    <span class="loginBadge">🛡️ FIREWALL ACADEMY X</span>
+    <h2>Secure academy access</h2>
+    <p class="lead muted">Choose your account type below. Learners can access courses and progress, while administrators can securely open the learner directory and analytics.</p>
+    <div class="loginBenefits">
+      <span>📚 <b>Learning</b><small>Courses & interactive lessons</small></span>
+      <span>⭐ <b>Progress</b><small>XP, badges & certificates</small></span>
+      <span>🧑‍💻 <b>Administration</b><small>Protected analytics</small></span>
+      <span>🔒 <b>Secure Access</b><small>Role-specific login</small></span>
+    </div>
+    <div class="loginSecurityNote">🔐 Browser-only mode stores learner accounts locally in this browser. Admin access uses the configured academy admin key.</div>
+  </div>
+  <div class="card authCard authCardPro">
+    <div class="roleSwitch" role="tablist" aria-label="Login type">
+      <button id="userLoginRole" class="roleTab active" type="button" onclick="switchLoginRole('user')">
+        <span>👤</span><b>User Login</b>
+        <small>Student / learner</small>
+      </button>
+      <button id="adminLoginRole" class="roleTab" type="button" onclick="switchLoginRole('admin')">
+        <span>🧑‍💻</span><b>Admin Login</b>
+        <small>Academy administrator</small>
+      </button>
+    </div>
+
+    <div id="userAuthPanel">
+      <div class="authTabs"><button id="loginTab" class="active" type="button" onclick="switchAuth('login')">Sign In</button>
+        <button id="registerTab" type="button" onclick="switchAuth('register')">Create Account</button>
+      </div>
+      <form id="loginForm" onsubmit="submitLogin(event)">
+        <div class="authTitle">
+          <span>Welcome back, learner</span>
+          <small>Continue your cybersecurity journey.</small>
+        </div>
+        <label>Email address<input id="loginEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Password<div class="passwordField">
+          <input id="loginPassword" type="password" autocomplete="current-password" minlength="6" placeholder="Enter your password" required>
+          <button type="button" onclick="togglePassword('loginPassword',this)">Show</button>
+        </div>
+        </label>
+        <button class="primary wide" type="submit">🔐 Sign In as User</button>
+        <p class="authHint">New here? Choose <b>Create Account</b> to start a persistent learner profile.</p>
+      </form>
+      <form id="registerForm" class="hidden" onsubmit="submitRegister(event)">
+        <div class="authTitle">
+          <span>Create your learner account</span>
+          <small>Your certificate name and progress will use this profile.</small>
+        </div>
+        <label>Full name<input id="registerName" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="Your full name" required></label>
+        <label>Email address<input id="registerEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Password<div class="passwordField"><input id="registerPassword" type="password" autocomplete="new-password" minlength="6" placeholder="At least 6 characters" required>
+          <button type="button" onclick="togglePassword('registerPassword',this)">Show</button>
+        </div>
+      </label>
+        <label>Confirm password<div class="passwordField">
+          <input id="registerConfirm" type="password" autocomplete="new-password" minlength="6" placeholder="Repeat your password" required>
+          <button type="button" onclick="togglePassword('registerConfirm',this)">Show</button>
+        </div>
+      </label>
+        <button class="primary wide" type="submit">🚀 Create User Account</button>
+        <p class="authHint">This creates a learner account for the local academy installation.</p>
+      </form>
+    </div>
+
+    <form id="adminLoginForm" class="adminLoginPanel hidden" onsubmit="submitAdminLogin(event)">
+      <div class="adminLoginIcon">🛡️</div>
+      <div class="authTitle">
+        <span>Administrator access</span>
+        <small>Open protected learner analytics and account management.</small>
+      </div>
+      <div class="adminAccessBadge">
+        <span>●</span> ADMIN CONSOLE • KEY REQUIRED</div>
+      <label>Admin access key<div class="passwordField">
+        <input id="adminLoginKey" type="password" autocomplete="current-password" placeholder="Enter academy admin key" required>
+        <button type="button" onclick="togglePassword('adminLoginKey',this)">Show</button>
+      </div>
+      </label>
+      <button class="primary wide" type="submit">🧑‍💻 Enter Admin Console</button>
+      <p class="authHint">The key is checked locally in this browser and is never displayed on the page.</p>
+    </form>
+    <div id="authStatus" class="authStatus" aria-live="polite"></div>
+  </div>
+</div>
+</section>
+
+<div id="courseModal" class="modal" aria-hidden="true">
+  <div class="modalPanel courseModalPanel">
+    <button class="modalClose" onclick="closeModal('courseModal')">×</button>
+    <div id="courseModalBody"></div>
+  </div>
+  </div>
+<div id="lessonModal" class="modal" aria-hidden="true">
+  <div class="modalPanel lessonModalPanel">
+    <button class="modalClose" onclick="closeModal('lessonModal')">×</button>
+    <div id="lessonModalBody"></div>
+  </div>
+  </div>
+<div id="certModal" class="modal" aria-hidden="true">
+  <div class="modalPanel certModalPanel">
+    <button class="modalClose" onclick="closeModal('certModal')">×</button>
+    <div id="certModalBody"></div>
+  </div></div>
+<div id="profileModal" class="modal" aria-hidden="true">
+  <div class="modalPanel profilePanel">
+    <button class="modalClose" onclick="closeModal('profileModal')">×</button>
+    <div class="modalEyebrow">LEARNER PROFILE</div>
+    <h2>👋 Set up your academy profile</h2>
+    <p class="muted">Your name is shown on certificates and your progress dashboard. Email is optional.</p>
+    <div class="profileForm">
+      <input id="profileName" placeholder="Your name">
+      <input id="profileEmail" type="email" placeholder="Email (optional)">
+      <button class="primary" onclick="saveProfile()">Save Profile →</button>
+    </div>
+  </div></div>
+<footer>Firewall Academy X • Educational simulator • Generated policies are examples and do not automatically change your operating-system firewall.</footer>
+<script src="app.js"></script>
+<script>
+/* Firewall Academy X 5.6 — Offline AI Coach improvements */
+(function () {
+  const coachAnswers = [
+    {keys:["what hacker attacks our websites","hackers attack our websites","types of hackers","cyber attacks"],
+     answer:"Common web attacks include SQL injection, XSS, credential attacks, CSRF, bot abuse and DDoS. A practical defense is layered: validate input, use authentication and authorization, deploy WAF rules, rate-limit abuse, log security events, and monitor alerts."},
+    {keys:["firewalls","firewall","what is firewall"],
+     answer:"A firewall controls network traffic using rules. A useful rule normally defines source, destination, protocol/port and an action such as ALLOW, DENY or LOG. Good policies use least privilege, specific scopes and logging."},
+    {keys:["stateful firewall","stateful"],
+     answer:"A stateful firewall tracks connection state, so return traffic for an established connection can be evaluated against the session state. This differs from a stateless filter that evaluates packets mainly from individual rule fields."},
+    {keys:["nat","network address translation"],
+     answer:"NAT translates addresses between network zones. Common forms include source NAT for outbound connections and destination NAT/port forwarding for published services. NAT is not a replacement for a firewall policy."},
+    {keys:["waf","web application firewall"],
+     answer:"A WAF inspects HTTP/HTTPS traffic at the application layer. It can detect patterns associated with SQL injection, XSS and other web attacks, then allow, log or block according to policy. Rules should be tested to reduce false positives."},
+    {keys:["owasp","owasp 2025"],
+     answer:"OWASP resources help organize common web-application security risks. Use them as a checklist for secure design, input handling, authentication, access control, logging and testing rather than relying on one control."},
+    {keys:["rule design","design a rule","firewall rule"],
+     answer:"Design a firewall rule around a narrow source, destination and service. Choose the smallest required action, enable logging for important decisions, place specific rules before broad ones, and test the rule before enforcement."},
+    {keys:["logging","logs","log"],
+     answer:"Security logs should capture useful context such as timestamp, source, destination, service, action and rule identifier. Avoid collecting unnecessary sensitive data. Review logs for repeated denies, unusual access and policy changes."},
+    {keys:["study plan","my study plan","how should i study"],
+     answer:"Use a simple cycle: Learn one concept → build a small rule or example → test it → review the result → complete the quiz. Keep notes on why a decision is safe and what you would verify next."}
+  ];
+
+  function offlineCoachAnswer(q) {
+    const t = String(q || "").trim().toLowerCase();
+    if (!t) return "Ask a specific cybersecurity question, for example: “What is a firewall?”, “Explain WAF”, or “How should I design a rule?”";
+    for (const item of coachAnswers) {
+      if (item.keys.some(k => t.includes(k))) return item.answer;
+    }
+    return "I’m the offline Firewall Coach. I can explain firewalls, stateful inspection, NAT, WAF, OWASP, ports, least privilege, logging, segmentation, rule design and study plans. Try a specific question such as “What is a stateful firewall?”";
+  }
+
+  // Expose a stable helper for the existing coach implementation.
+  window.firewallCoachOfflineAnswer = offlineCoachAnswer;
+
+  // Add a small avatar/photo-like bot mark without changing the site's theme.
+  document.addEventListener("DOMContentLoaded", function () {
+    const headings = Array.from(document.querySelectorAll("h1,h2,h3")).filter(
+      el => /Firewall AI Coach/i.test(el.textContent || "")
+    );
+    headings.forEach(h => {
+      if (!h.querySelector(".fax-coach-avatar")) {
+        const a = document.createElement("span");
+        a.className = "fax-coach-avatar";
+        a.textContent = "🤖";
+        a.setAttribute("aria-label", "Firewall AI Coach");
+        a.style.cssText = "display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;margin-right:12px;border-radius:14px;background:linear-gradient(135deg,#172b46,#263d68);font-size:30px;vertical-align:middle;box-shadow:0 4px 14px rgba(0,0,0,.22);";
+        h.prepend(a);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
