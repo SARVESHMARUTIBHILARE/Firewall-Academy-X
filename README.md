@@ -31,7 +31,80 @@ The system provides **50 different cybersecurity courses**, with each course con
 </tr>
 </table>
 
+### 📸 Screenshots Section 2 ###
 
+<table width="100%">
+    <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV13.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV14.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV15.png title="Ai " /></td>
+</tr>
+ <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV16.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV17.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV18.png title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV19.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV20.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV21.png title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV22.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV23.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV24.png title="Ai " /></td>
+</tr>
+</table>
+
+### 📸 Screenshots Section 3 ###
+
+<table width="100%">
+    <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV25.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV26.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV27.png title="Ai " /></td>
+</tr>
+ <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV28.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV29.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV30.png title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV31.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV32.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV33.png title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV34.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV35.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV36.png title="Ai " /></td>
+</tr>
+</table>
+
+### 📸 Screenshots Section 4 ###
+
+<table width="100%">
+    <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV37.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV38.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV39.png title="Ai " /></td>
+</tr>
+ <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV40.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV41.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV42.png title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV43.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV44.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV45.png title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV46.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV47.png title="Ai " /></td>
+       
+</tr>
+</table>
 # 📌 Project Overview
 
 The **Firewall Academy X** platform helps users learn and practice cybersecurity concepts through:
