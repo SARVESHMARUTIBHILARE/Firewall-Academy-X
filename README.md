@@ -10,24 +10,24 @@ The system provides **50 different cybersecurity courses**, with each course con
 
 <table width="100%">
     <tr>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/12.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/11.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/22.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV1.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV2.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV3.png title="Ai " /></td>
 </tr>
  <tr>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/23.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/33.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/34.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV4.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV5.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV6.png title="Ai " /></td>
 </tr> 
 <tr>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/44.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/45.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/55.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV7.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV8.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV9.png title="Ai " /></td>
 </tr> 
 <tr>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/56.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/66.jpg title="Ai " /></td>
-        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/67.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV10.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV11.png title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/SAV12.png title="Ai " /></td>
 </tr>
 </table>
 
