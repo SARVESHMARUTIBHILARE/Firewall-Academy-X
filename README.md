@@ -6,25 +6,31 @@ The system provides **50 different cybersecurity courses**, with each course con
 
 ---
 
-# 📸 Screenshots
+### 📸 Screenshots Section 1 ###
 
-| Home Dashboard | Course Dashboard |
-|:---:|:---:|
-| <img src="images/home.png" width="480" alt="Firewall Academy X Dashboard"> | <img src="images/courses.png" width="480" alt="Cybersecurity Courses"> |
+<table width="100%">
+    <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/12.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/11.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/22.jpg title="Ai " /></td>
+</tr>
+ <tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/23.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/33.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/34.jpg title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/44.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/45.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/55.jpg title="Ai " /></td>
+</tr> 
+<tr>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/56.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/66.jpg title="Ai " /></td>
+        <td width="33%"><img alt="Screenshot of firewall Academy x"src=images/67.jpg title="Ai " /></td>
+</tr>
+</table>
 
-| Interactive Learning | Firewall Builder |
-|:---:|:---:|
-| <img src="images/learning.png" width="480" alt="Interactive Learning"> | <img src="images/firewall-builder.png" width="480" alt="Firewall Builder"> |
-
-| AI Cybersecurity Coach | Certificate |
-|:---:|:---:|
-| <img src="images/ai-coach.png" width="480" alt="AI Cybersecurity Coach"> | <img src="images/certificate.png" width="480" alt="Certificate"> |
-
-| Certificate Verification | User Dashboard |
-|:---:|:---:|
-| <img src="images/verification.png" width="480" alt="Certificate Verification"> | <img src="images/dashboard.png" width="480" alt="User Dashboard"> |
-
----
 
 # 📌 Project Overview
 
